@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html lang="pl-PL" xmlns:th="http://thymeleaf.org">  
+<head>
+<title>SmartHouse | Room Weather</title>
+<div th:replace="fragments/fragments :: header"></div>
+</head>
+<body>
+<div id="app">
+<my-layout :is-logged="1">
+<room-weather></room-weather>
+</my-layout>
+</div>
+
+<!-- <script th:inline="javascript">
+window.roomWeather = /*[[${roomWeather}]]*/ null;
+</script> -->
+<div th:replace="fragments/fragments :: scripts"></div>
+</body>
+</html>

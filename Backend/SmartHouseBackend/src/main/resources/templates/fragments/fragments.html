@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<!-- HEADER -->
+<head th:fragment="header" th:remove="tag">
+<meta charset="UTF-8"/>
+<!-- CSS  -->
+<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons' rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet" /> 
+<link href="https://unpkg.com/vuetify@0.17.7/dist/vuetify.min.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+<div id="app">
+<h1>Your content</h1>
+</div>
+
+<!-- SCRIPTS  -->
+<div th:fragment="scripts" th:remove="tag">
+<script src="https://unpkg.com/vue@2.5.13/dist/vue.min.js"></script>
+<script src="https://unpkg.com/vuetify@0.17.7/dist/vuetify.min.js"></script>
+<script src="https://unpkg.com/chart.js@2.7.1/dist/Chart.min.js"></script>
+<script src="https://unpkg.com/vue-chartjs@3.1.1/dist/vue-chartjs.min.js"></script>
+<script src="https://unpkg.com/axios@0.17.1/dist/axios.min.js"></script>
+<script src="js/main.js"></script>
+<script>var App = new Vue({el: '#app'})</script>
+</div>
+</body>
+</html>

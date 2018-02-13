@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">  
+<head>
+<title>SmartHouse | Login</title>
+<div th:replace="fragments/fragments :: header"></div>
+</head>
+<body>
+<div id="app">
+<my-layout :is-login-page="1">
+<v-layout justify-center="justify-center" align-center="align-center">
+<v-container grid-list-md="grid-list-md" text-xs-center="text-xs-center">
+    <v-layout row="row" wrap="wrap">
+      <v-flex xs12="xs12" md4="md4" offset-md4="offset-md4">
+        <v-form name="f" th:action="@{/login}" method="post">
+		  <v-text-field
+		    label="Login"
+		    id="username"
+		    name="username"
+		    required="true"
+		  ></v-text-field>
+		  <v-text-field
+		    label="Password"
+		    type="password"
+			id="password"
+			name="password"
+		    required="true"
+		  ></v-text-field>
+		  <input type="hidden"  th:name="${_csrf.parameterName}"   th:value="${_csrf.token}"/>
+		  <v-btn block="block" flat="flat" dark="dark" type="submit">Log in</v-btn>
+		</v-form>
+      </v-flex>
+      <v-flex xs12="xs12" md4="md4" offset-md4="offset-md4">
+      	<v-alert th:if="${param.logout}" color="success" icon="check_circle" value="true"> 
+		    You have been logged out.
+		</v-alert>
+		<v-alert th:if="${param.error}" color="error" icon="warning" value="true">
+		  Invalid username and/or password.
+		</v-alert>
+      </v-flex>
+  </v-layout>
+</v-container>   
+</v-layout>
+
+
+</my-layout>
+</div>
+
+
+<div th:replace="fragments/fragments :: scripts"></div>
+</body>
+</html>
