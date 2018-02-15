@@ -31,6 +31,7 @@ Backend_backup/
 **/.gitignore
 **/.mvn
 **/mvnw*
+connection_diagram.xcf
 
 **/.project
 **/.classpath
