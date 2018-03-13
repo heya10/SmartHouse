@@ -68,7 +68,7 @@ Vue.component('my-layout', {
 Vue.component('dashboard', {
 	template:
 `<v-container grid-list-md text-xs-center fill-height>
-    <v-layout row wrap>
+    <v-layout row wrap style='max-width:100%;'>
       <v-flex xs12 md4>
       	<v-layout row wrap>
 	      <v-flex xs12>
@@ -117,7 +117,7 @@ mounted(){
 Vue.component('room-weather', {
 	template:
 `<v-container grid-list-md text-xs-center fill-height>
-    <v-layout row wrap>
+    <v-layout row wrap style='max-width:100%;'>
       <v-flex xs12>
 		<h1>Room Weather</h1>
       </v-flex>
